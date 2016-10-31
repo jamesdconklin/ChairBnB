@@ -1,7 +1,7 @@
 import React from 'react';
 import App from './app';
 import { Provider } from 'react-redux';
-import { Router, Route, InndexRoute, hashHistory } from 'react-router';
+import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import SessionFormContainer from './session/session_form_container';
 
 
