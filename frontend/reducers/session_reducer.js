@@ -5,6 +5,7 @@ import { LOGOUT, RECEIVE_ERRORS, RECEIVE_CURRENT_USER }
 import { login, receiveErrors, receiveCurrentUser }
   from '../actions/session_actions';
 import { merge } from 'lodash';
+import { hashHistory } from 'react-router';
 
 const _defaultState = {
   currentUser: null,
@@ -25,6 +26,8 @@ export const SessionReducer = (state = _defaultState, action) => {
 
     case RECEIVE_CURRENT_USER:
       console.log("SessionReducer RCU caught", action);
+      hashHistory.push("/");
+
       return {currentUser: action.user, errors: []};
 
     default:

@@ -40,7 +40,7 @@ class SessionForm extends React.Component {
       return (
         <ul>
           {filteredErrors.map(
-            (err) => <li>{err}</li>
+            (err) => <li key={err}>{err}</li>
           )}
         </ul>
       );
@@ -50,9 +50,6 @@ class SessionForm extends React.Component {
   }
 
   render () {
-    if (this.props.loggedIn) {
-      this.props.router.push("/");
-    }
     let altType = (this.props.formType === "Log In") ? "Sign Up" : "Log In";
     let altRoute = `/${altType.toLowerCase().split(' ').join('')}`;
 
