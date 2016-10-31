@@ -25,7 +25,7 @@ export const SessionReducer = (state = _defaultState, action) => {
 
     case RECEIVE_CURRENT_USER:
       console.log("SessionReducer RCU caught", action);
-      return {user: action.user, errors: []};
+      return {currentUser: action.user, errors: []};
 
     default:
     console.log("SessionReducer DEFAULT caught", action);
